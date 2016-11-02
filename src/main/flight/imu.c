@@ -424,11 +424,6 @@ static int imuCalculateAccelerometerConfidence(void)
     return (nearness > MAX_ACC_SQ_NEARNESS) ? 0 : MAX_ACC_SQ_NEARNESS - nearness;
 }
 
-static bool isMagnetometerHealthy(void)
-{
-    return (magADC[X] != 0) && (magADC[Y] != 0) && (magADC[Z] != 0);
-}
-
 static void imuCalculateEstimatedAttitude(float dT)
 {
     const bool canUseMAG = sensors(SENSOR_MAG) && isMagnetometerHealthy();
