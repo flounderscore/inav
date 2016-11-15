@@ -469,6 +469,7 @@ static bool detectBaro(baroSensor_e baroHardwareToUse)
 static bool detectPitot(uint8_t pitotHardwareToUse)
 {
     pitotSensor_e pitotHardware = pitotHardwareToUse;
+    requestedSensors[SENSOR_INDEX_PITOT] = pitotHardwareToUse;   // FIXME
 
     switch (pitotHardware) {
         case PITOT_DEFAULT:
