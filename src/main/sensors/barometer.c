@@ -149,4 +149,9 @@ int32_t baroCalculateAltitude(void)
     return BaroAlt;
 }
 
+bool isBarometerHealthy(void)
+{
+    return true;
+}
+
 #endif /* BARO */
