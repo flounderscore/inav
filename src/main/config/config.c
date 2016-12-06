@@ -505,11 +505,12 @@ static void resetConf(void)
     masterConfig.boardAlignment.rollDeciDegrees = 0;
     masterConfig.boardAlignment.pitchDeciDegrees = 0;
     masterConfig.boardAlignment.yawDeciDegrees = 0;
-    masterConfig.sensorSelectionConfig.acc_hardware = ACC_DEFAULT;     // default/autodetect
     masterConfig.gyroConfig.gyroMovementCalibrationThreshold = 32;
 
-    masterConfig.sensorSelectionConfig.mag_hardware = MAG_DEFAULT;     // default/autodetect
-    masterConfig.sensorSelectionConfig.baro_hardware = BARO_DEFAULT;   // default/autodetect
+    masterConfig.sensorSelectionConfig.acc_hardware = ACC_AUTODETECT;
+    masterConfig.sensorSelectionConfig.mag_hardware = MAG_NONE;
+    masterConfig.sensorSelectionConfig.baro_hardware = BARO_NONE;
+    masterConfig.sensorSelectionConfig.pitot_hardware = PITOT_NONE;
 
     resetBatteryConfig(&masterConfig.batteryConfig);
 
