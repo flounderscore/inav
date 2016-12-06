@@ -646,6 +646,8 @@ void taskMainPidLoop(timeUs_t currentTimeUs)
         processServoTilt();
     }
 
+    processServoAutotrim();
+
     //Servos should be filtered or written only when mixer is using servos or special feaures are enabled
     if (isServoOutputEnabled()) {
         filterServos();
